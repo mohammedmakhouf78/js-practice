@@ -26,6 +26,25 @@ class SinglyLinksList {
         }
     }
 
+    remove(val) {
+        let current = this.head
+        let prev = null
+        while (current) {
+            if (current.val == val) {
+                if (current == this.head) {
+                    this.head = current.next
+                } else if (current == this.last) {
+                    this.last = prev
+                }
+                else {
+                    prev.next = current.next
+                }
+            }
+            perv = current
+            current = current.next
+        }
+    }
+
     // remove(val) {
     //     let current = this.head
     //     while (current.next) {
