@@ -1,0 +1,23 @@
+.dice-img-con img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.dice-result {
+    background-color: rgba(0, 128, 0, 0.219);
+    width: 400px;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.dice-result img {
+    width: 60px;
+    height: 60px;
+}
