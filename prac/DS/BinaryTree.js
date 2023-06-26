@@ -117,7 +117,89 @@ function BinaryTree() {
             }
         }
     }
+
+    this.depthFirst = function (callback) {
+        let stack = [this._root]
+
+        while (stack.length) {
+            let current = stack.pop()
+            callback(current.value)
+
+            if (current.right) stack.push(current.right)
+            if (current.left) stack.push(current.left)
+        }
+    }
+
+    this.breadthFirstStack = function (callback) {
+        let stack = [this._root]
+        callback(this._root.value)
+        while (stack.length) {
+            let current = stack.pop()
+            if (current?.left?.value) callback(current.left.value)
+            if (current?.right?.value) callback(current.right.value)
+
+            if (current.right) stack.push(current.right)
+            if (current.left) stack.push(current.left)
+        }
+    }
+
+    this.breadthFirstQueue = function (callback) {
+        let queue = [this._root]
+        while (queue.length) {
+            let current = queue.pop()
+            callback(current.value)
+            if (current.left) queue.unshift(current.left)
+            if (current.right) queue.unshift(current.right)
+        }
+    }
+
+    this.searchForValue = function (value) {
+        let found = false
+        this.depthFirst(cur => {
+            if (cur == value) {
+                found = true
+            }
+        })
+        return found
+    }
+
+    this.searchForValueRecursive = function (target) {
+        return searchForValueRecursiveHelper(this._root, target)
+        function searchForValueRecursiveHelper(node, target) {
+            if (!node) return false
+            if (node.value == target) return true
+            return (
+                searchForValueRecursiveHelper(node.left, target) ||
+                searchForValueRecursiveHelper(node.right, target)
+            )
+        }
+    }
+
+    this.getMinValue = function () {
+        return getMinValueHelper(this._root)
+        function getMinValueHelper(node) {
+            if (!node) return Infinity
+            return Math.min(node.value, getMinValueHelper(node.left), getMinValueHelper(node.right))
+        }
+    }
+
+    this.getMaxPath = function () {
+        return getMaxPathHelper(this._root)
+        function getMaxPathHelper(node) {
+            if (!node) return -Infinity
+            if (!node.left && !node.right) {
+                return node.value
+            }
+            if (node.left.value > node.right.value) {
+                return node.value + getMaxPathHelper(node.left)
+            } else {
+                return node.value + getMaxPathHelper(node.right)
+            }
+        }
+    }
 }
+
+
 
 function BinaryTreeNode(value) {
     this.value = value
