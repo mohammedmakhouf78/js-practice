@@ -1,3 +1,9 @@
+:root {
+    --bg-dark: #0a0a22;
+    --white: white;
+    --orange: #ff9a56;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -6,6 +12,12 @@
 
 body {
     font-family: 'Tajawal', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .app {
@@ -17,18 +29,46 @@ body {
     background-size: cover;
 }
 
+img {
+    width: 100%;
+}
+
+
+.orange-title {
+    margin-bottom: 1em;
+    color: var(--orange);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.sub-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 nav ul {
     display: flex;
     width: 100%;
     list-style: none;
     justify-content: space-between;
-    color: white;
+    color: var(--white);
     font-weight: 700;
     align-items: center;
 }
 
 nav ul li {
     padding: 0px 5px;
+}
+
+nav ul li a {
+    color: white;
 }
 
 nav ul li img {
@@ -42,7 +82,7 @@ nav ul li img {
 
 .adress {
     font-weight: 700;
-    color: white;
+    color: var(--white);
     font-size: 2.5rem;
     position: absolute;
     top: 50%;
@@ -59,7 +99,7 @@ nav ul li img {
 .line {
     width: 100%;
     height: 3px;
-    background-color: #cc7a43;
+    background-color: var(--orange);
     margin-bottom: 3rem;
 }
 
@@ -85,7 +125,7 @@ nav ul li img {
 
 .point span {
     position: absolute;
-    color: white;
+    color: var(--white);
     font-size: 1.1rem;
     top: 50%;
     left: 50%;
@@ -95,21 +135,31 @@ nav ul li img {
 
 
 .details p {
-    color: white;
+    color: var(--white);
     font-size: 1.1rem;
     font-weight: 700;
 }
 
-.bank {
-    background-image: url(https://img.freepik.com/premium-photo/old-library-hall-with-shelves-books-stacks_124507-15364.jpg?w=2000);
-    padding: 0em 8em;
-    font-weight: 700;
 
+
+
+
+
+
+
+
+
+.bank {
+    padding: 4rem 6rem;
+    background-image: url("./images/bg_library.jpeg");
+    font-weight: 700;
+    color: var(--white);
+    position: relative;
+    overflow-y: hidden;
 }
 
 .bank-elmarefa {
     text-align: center;
-    color: white;
 }
 
 
@@ -117,66 +167,180 @@ nav ul li img {
     font-size: 1.3rem;
 }
 
-.bank-elmarefa h2 {
-    margin-bottom: 2em;
-    color: #ff9a56;
-
-}
-
 .perant-pragraph {
-    /* position: absolute; */
-    width: 25%;
+    width: 300px;
+    text-align: justify;
 }
 
 .frist-pragraph {
-    color: red;
-
-    margin: 3em 0em;
+    margin-bottom: 2rem;
 }
 
-.last-pragraph {
-    color: red;
-
-
+.bank .hero {
+    width: 500px;
+    position: absolute;
+    bottom: -100px;
+    left: 0%;
 }
 
 
 
-.section {
-    background-image: url(https://freedesignfile.com/upload/2018/01/Handsome-young-man-in-business-suit-holding-tablet-PC-Stock-Photo-04.jpg);
+
+
+
+
+.services {
+    background-image: url("./images/search.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 5em;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--white);
 }
 
-.services {
+.title {
     text-align: center;
-    color: white;
 }
 
-.input input {
-    direction: ltr;
-    font-size: 1.3rem;
-    border-radius: 5px;
-    padding: .5em 1em;
-    background-color: rgba(255, 255, 255, 0.468);
+.title h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
 }
 
-.input i {
-    background-color: red;
-}
-
-
-
-.search-engine {
-    color: white;
-}
-
-.text {
-    width: 200px;
-    height: 30px;
-    border: 3px solid #ff9a56;
-    ;
-    font-size: 1.2rem;
+.search-engine p {
+    width: 300px;
+    font-size: 1rem;
+    text-align: justify;
     font-weight: 500;
+}
+
+
+
+.hiw {
+    background-color: var(--bg-dark);
+    background-image: url("./images/frame.png");
+    background-size: 10% 100%;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 3rem 3rem 3rem 8rem;
+}
+
+.hiw .items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hiw .items .item {
+    width: 22%;
+}
+
+.hiw .items .orange-title,
+.hiw .items .sub-title {
+    width: 100%;
+    text-align: right;
+}
+
+.hiw .items .orange-title {
+    margin: 1.5rem 0rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.hiw .items .icon {
+    width: 150px;
+    height: 150px;
+    background-color: var(--orange);
+    padding: 2rem;
+    border-radius: 50%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.hiw .items .icon svg {
+    fill: var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.htu {
+    background-color: var(--bg-dark);
+    background-image: url("./images/frame.png");
+    background-size: 10% 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 4rem 1rem 0rem;
+}
+
+.htu .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.htu .content .left,
+.htu .content .right {
+    width: 45%;
+    position: relative;
+    overflow: hidden;
+}
+
+.htu .content .bg {
+    width: 250px;
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    transform: rotateY(180deg);
+}
+
+.htu .content .data {
+    width: 330px;
+    margin-right: auto;
+}
+
+.htu .content .sub-title {
+    width: 330px;
+    text-align: justify;
+    margin: 1.5rem 0rem;
+}
+
+
+
+
+
+
+
+
+
+.sub {
+    padding: 15rem;
+    text-align: center;
+    background-image: url("./images/library.jpeg");
+    background-size: cover;
+}
+
+.sub .orange-title {
+    color: white;
+}
+
+.sub button {
+    font-weight: 600;
+    font-size: 1.1rem;
 }
