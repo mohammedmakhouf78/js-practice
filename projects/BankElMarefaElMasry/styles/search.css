@@ -1,0 +1,70 @@
+.app {
+    margin: 0px;
+    box-sizing: border-box;
+    background-image: url("../images/opening_book.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.app nav {
+    position: fixed;
+    width: 100%;
+    right: 0px;
+    z-index: 999;
+}
+
+.main {
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    padding: 0 3rem;
+    justify-content: space-between;
+}
+
+.main .orange-title,
+.main .sub-title {
+    text-align: right;
+    color: var(--white);
+    width: 100%;
+}
+
+.main .left {
+    box-shadow: 0px 2px 17px 10px rgba(255, 255, 255, 0.75) inset;
+    border-radius: 50px;
+}
+
+.main .left form {
+    width: 90%;
+}
+
+.main .left h2 {
+    width: 55%;
+    background-color: black;
+    color: var(--white);
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.3rem;
+}
+
+.main .left .sub-title {
+    width: 100%;
+    text-align: center;
+}
+
+.main .left label {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.main .left input {
+    border-radius: 25px;
+}
+
+.main .left .sub-title.sub2 {
+    width: 80%;
+    font-size: 0.8rem;
+    text-align: center;
+}
