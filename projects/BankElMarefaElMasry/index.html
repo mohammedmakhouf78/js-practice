@@ -15,7 +15,7 @@
 </head>
 
 <body dir="rtl">
-    <div class="app">
+    <div class="app" id="app">
         <nav>
             <ul>
                 <li>
@@ -42,16 +42,16 @@
                     <a href="">ورش العمل</a>
                 </li>
                 <li>
-                    <a href="">من نحن؟</a>
+                    <a href="./index.html">من نحن؟</a>
                 </li>
                 <li>
-                    <a href="">اسئله متكرره</a>
+                    <a href="./faq.html">اسئله متكرره</a>
                 </li>
                 <li>
                     <a href="./contact.html">تواصل معنا</a>
                 </li>
                 <li>
-                    <a href="">تسجيل الدخول</a>
+                    <a href="./search.html">تسجيل الدخول</a>
                 </li>
                 <li>
                     <a href="">
@@ -62,7 +62,7 @@
 
         </nav>
         <div class="main">
-            <div class="adress">
+            <div class="adress" id="address">
                 <p>ورش عمل لاعضاء هيئة التدريس في مصر</p>
                 <p>مقدمة من اكاديميات نيتشر البحثيه بالتعاون</p>
                 <p>,,هيئة تمويل العلوم وتكنولوجياالابتكار,,</p>
@@ -70,28 +70,27 @@
             <div class="line-details-con">
                 <div class="line"></div>
                 <div class="details">
-                    <div>
+                    <div class="choice" data-id="1">
                         <div class="point">
                             <span>1</span>
                         </div>
                         <p>التفاقية النشر</p>
-
                     </div>
-                    <div>
+                    <div class="choice" data-id="2">
                         <div class="point">
                             <span>2</span>
                         </div>
                         <p>ورش عمل تدريبيه</p>
 
                     </div>
-                    <div>
+                    <div class="choice" data-id="3">
                         <div class="point">
                             <span>3</span>
                         </div>
                         <p>المواد التعليميه لجميع المواد الدراسيه</p>
 
                     </div>
-                    <div>
+                    <div class="choice" data-id="4">
                         <div class="point">
                             <span>4</span>
                         </div>
@@ -293,6 +292,8 @@
     </section>
 
     <script src="../../bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>

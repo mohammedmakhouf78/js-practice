@@ -22,6 +22,31 @@
     line-height: 1.5;
 }
 
+.search-address {
+    left: 50%;
+    transform: translateY(-100%) translateX(-50%);
+    width: 900px;
+}
+
+.search-address .orange-title {
+    font-size: 2rem;
+    width: 100%;
+}
+
+.search-address input {
+    padding: 2.5rem;
+    font-size: 2.5rem;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.search-address input::placeholder {
+    color: var(--white);
+    font-weight: 700;
+}
+
 .line-details-con {
     width: calc(100% - 6em);
     position: absolute;
@@ -41,6 +66,10 @@
     justify-content: space-between;
 }
 
+.details .choice {
+    cursor: pointer;
+}
+
 .details div {
     display: flex;
     align-items: center;
@@ -53,6 +82,10 @@
     background-color: darkslateblue;
     border-radius: 50px;
     margin-left: 8px;
+}
+
+.details p {
+    margin-bottom: 0px;
 }
 
 .point span {

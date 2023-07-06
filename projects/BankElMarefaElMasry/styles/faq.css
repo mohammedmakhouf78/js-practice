@@ -1,0 +1,36 @@
+.app {
+    margin: 0px;
+    background-color: var(--bg-dark);
+    background-image: url("../images/frame.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.app nav {
+    position: fixed;
+    width: 100%;
+    right: 0px;
+    z-index: 999;
+}
+
+.main {
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    padding: 0 3rem;
+    justify-content: space-between;
+    padding-top: 10rem;
+}
+
+.main .orange-title,
+.main .sub-title {
+    width: 100%;
+}
+
+.main .search {
+    width: 70%;
+}
+
+.main .search input {
+    border-radius: 30px;
+}
