@@ -1,0 +1,41 @@
+.app {
+    margin: 0px;
+    background-color: var(--bg-dark);
+    background-image: url("../images/frame.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.app nav {
+    position: fixed;
+    width: 100%;
+    right: 0px;
+    z-index: 999;
+}
+
+.main {
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    padding: 0 3rem;
+    justify-content: space-between;
+    padding-top: 10rem;
+}
+
+.main .orange-title,
+.main .sub-title {
+    width: 100%;
+}
+
+.main .contact-card {
+    width: 700px;
+    border-radius: 50px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.main .contact-card .orange-title {
+    text-align: right;
+}
