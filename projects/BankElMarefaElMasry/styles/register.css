@@ -82,3 +82,11 @@
 .main .left .icon svg {
     fill: var(--white);
 }
+
+.main .left .choice {
+    cursor: pointer;
+}
+
+.main .left .choice.active .icon {
+    box-shadow: 0px 2px 17px 10px rgba(255, 255, 255, 0.75);
+}

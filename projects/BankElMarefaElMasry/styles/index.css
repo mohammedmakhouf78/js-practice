@@ -267,7 +267,7 @@
     overflow: hidden;
 }
 
-.htu .content .bg {
+.htu .content .right .bg {
     width: 250px;
     position: absolute;
     top: 10px;
@@ -286,6 +286,12 @@
     margin: 1.5rem 0rem;
 }
 
+.htu .content .left .bg {
+    width: 310px;
+    position: absolute;
+    bottom: 0px;
+    right: -40px;
+}
 
 
 

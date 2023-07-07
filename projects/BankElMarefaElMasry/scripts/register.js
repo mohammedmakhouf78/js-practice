@@ -3,7 +3,7 @@ let choices = document.querySelectorAll(".main .left .choice")
 let choicesArr = [
     {
         id: 1,
-        img: "./images/opening_book.jpeg"
+        img: "./images/man_typing.jpeg"
     },
     {
         id: 2,
@@ -29,15 +29,14 @@ choices.forEach(choice => {
         appElement.style.backgroundImage = `
         url("${item.img}")
         `
+        choices.forEach(item => {
+            item.classList.remove('active')
+        })
 
-        const addressElement = document.getElementById("address")
 
-        addressElement.innerHTML = item.text
-
-        addressElement.classList.remove("search-address")
-
-        if (item.id == 4) {
-            addressElement.classList.add("search-address")
+        if (this == choice) {
+            this.classList.add('active')
         }
+
     })
 })
