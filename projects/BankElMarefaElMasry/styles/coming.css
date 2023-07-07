@@ -1,0 +1,36 @@
+.app {
+    margin: 0px;
+    background-color: var(--bg-dark);
+}
+
+.app nav {
+    position: fixed;
+    width: 100%;
+    right: 0px;
+    z-index: 999;
+    background-color: var(--bg-dark);
+}
+
+.main {
+    position: relative;
+    align-items: center;
+    padding: 0 1.5rem;
+    justify-content: space-between;
+    padding-top: 10rem;
+}
+
+.main .orange-title,
+.main .sub-title {
+    width: 100%;
+}
+
+.resources {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.resources .resource {
+    width: 22%;
+    margin-bottom: 2rem;
+}
