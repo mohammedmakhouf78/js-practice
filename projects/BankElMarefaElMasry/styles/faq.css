@@ -2,8 +2,8 @@
     margin: 0px;
     background-color: var(--bg-dark);
     background-image: url("../images/frame.png");
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-repeat: repeat-y;
+    background-size: 200px;
 }
 
 .app nav {
@@ -14,12 +14,12 @@
 }
 
 .main {
-    height: 100vh;
     position: relative;
     align-items: center;
     padding: 0 3rem;
     justify-content: space-between;
     padding-top: 10rem;
+    width: 75%;
 }
 
 .main .orange-title,
@@ -33,4 +33,13 @@
 
 .main .search input {
     border-radius: 30px;
+}
+
+.main .questions {
+    color: white;
+}
+
+.main .questions .orange-title,
+.main .questions .sub-title {
+    text-align: justify;
 }
