@@ -1,7 +1,5 @@
 let choices = document.querySelectorAll(".details .choice")
 
-console.log(choices);
-
 let choicesArr = [
     {
         id: 1,

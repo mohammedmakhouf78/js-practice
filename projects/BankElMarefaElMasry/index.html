@@ -27,7 +27,7 @@
                     <a href="./index.html">الرئيسي</a>
                 </li>
                 <li>
-                    <a href="">سجل</a>
+                    <a href="./register.html">سجل</a>
                 </li>
                 <li>
                     <a href="./search.html">بحث</a>
@@ -150,7 +150,7 @@
                 الاختصاصات ،وتتميز بالدقه</p>
 
 
-            <button class="btn btn-outline-warning">شاهد الفيديو التوضيحي </button>
+            <button class="btn btn-outline-warning" data-modal1>شاهد الفيديو التوضيحي </button>
         </div>
 
     </section>
@@ -247,7 +247,7 @@
                         للمرحلة
                         الثانوية
                     </p>
-                    <button class="btn btn-outline-warning">
+                    <button class="btn btn-outline-warning" data-modal1>
                         شاهد الفيديو التوضيحي
                     </button>
                 </div>
@@ -266,7 +266,7 @@
                         الفيديو
                         التوضيحي لمعرفة كيفية إنشاء الحساب الفرعي
                     </p>
-                    <button class="btn btn-outline-warning">
+                    <button class="btn btn-outline-warning" data-modal2>
                         شاهد الفيديو التوضيحي
                     </button>
                 </div>
@@ -291,9 +291,24 @@
         </button>
     </section>
 
+    <div class="mymodal" id="mymodal1">
+        <button class="btn btn-danger closeBtn">X</button>
+        <video width="90%" height="90%" controls>
+            <source src="./images/video1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="mymodal" id="mymodal2">
+        <button class="btn btn-danger closeBtn">X</button>
+        <video width="90%" height="90%" controls>
+            <source src="./images/video2.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <script src="../../bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/modal.js"></script>
 </body>
 
 </html>

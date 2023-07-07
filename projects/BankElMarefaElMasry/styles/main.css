@@ -47,3 +47,26 @@ img {
 .inner-shadow {
     box-shadow: 0px 2px 17px 10px rgba(255, 255, 255, 0.75) inset;
 }
+
+.mymodal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0a0a2294;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.mymodal .closeBtn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.mymodal.active {
+    display: flex;
+}
