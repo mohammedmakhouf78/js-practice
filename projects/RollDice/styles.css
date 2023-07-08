@@ -17,7 +17,45 @@
     margin-bottom: 0.5rem;
 }
 
+.dice-result.animate {
+    animation: dice;
+    animation-duration: 0.5s;
+}
+
+.dice-result.delete-animation {
+    animation: delete;
+    animation-duration: 0.5s;
+}
+
 .dice-result img {
     width: 60px;
     height: 60px;
+}
+
+@keyframes dice {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(0.75);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes delete {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
 }

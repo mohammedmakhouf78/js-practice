@@ -1,23 +1,24 @@
 let rollDiceBtn = document.querySelector("#rollDiceBtn")
-let count = 1
+let resultSection = document.querySelector("#resultSection")
+let diceImg = document.querySelector("#diceImg")
 
-rollDiceBtn.addEventListener('click', function () {
+const results = []
+
+
+function rollDiceHandler(e) {
     let randomDiceNumber = Math.floor(Math.random() * 6) + 1
-    let diceImg = document.querySelector("#diceImg")
+
+    results.push({
+        "randomDiceNumber": randomDiceNumber,
+    })
 
     diceImg.src = `./images/dice${randomDiceNumber}.png`
 
-    let resultSection = document.querySelector("#resultSection")
+    render()
 
-    resultSection.innerHTML += `
-        <div class="dice-result" style="transform: scale(0);">
-            <span>Roll ${count}:</span>
-            <img class="dice-img" src="./images/dice${randomDiceNumber}.png" alt="">
-        </div>
-    `
+    document.querySelector(".dice-result:last-child").classList.add('animate')
 
     rollDiceBtn.disabled = true
-
     anime({
         targets: diceImg,
         rotate: 360,
@@ -26,11 +27,33 @@ rollDiceBtn.addEventListener('click', function () {
             rollDiceBtn.disabled = false
         }
     })
+}
 
-    anime({
-        targets: ".dice-result:last-child",
-        scale: 1
-    })
+function deleteButtonHandler(e) {
+    let index = e.dataset.index
+    results.splice(index, 1)
 
-    count++
-})
+    e.parentElement.classList.add("delete-animation")
+
+    setTimeout(() => {
+        render()
+    }, 500)
+}
+
+function render() {
+    resultSection.innerHTML = ""
+    results.forEach((result, index) => {
+        resultSection.innerHTML += `
+            <div class="dice-result">
+                <span>Roll ${index + 1}:</span>
+                <img class="dice-img" src="./images/dice${result.randomDiceNumber}.png" alt="">
+                <button class="btn btn-outline-danger delete" data-index="${index}" onClick="deleteButtonHandler(this)">-</button>
+            </div>
+        `
+    });
+
+    // anime({
+    //     targets: ".dice-result:last-child",
+    //     scale: 1,
+    // })
+}
